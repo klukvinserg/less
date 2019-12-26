@@ -1,0 +1,65 @@
+// .area {
+//     margin: auto;
+//     // height: 200px;
+//     // width: 100px;
+//     // background-color: red;
+// }
+
+// @media (max-width: 600px) {
+//     .area {
+//         width: 500px;
+//         height: 200px;
+//         background-color: brown;
+//     }
+// }
+
+// @media (min-width: 800px) {
+//     .area {
+//         width: 700px;
+//         height: 200px;
+//         background-color: rgb(138, 165, 42);
+//     }
+// }
+
+@tablet: 800px;
+@darkgrey: rgb(136, 131, 131);
+@decktop: ~"(min-width: 800px)";
+
+.area {
+  margin: auto;
+  &:hover { 
+      background-color: red;
+    }
+    
+     @media (max-width: @tablet) {
+        width: 500px;
+        height: 200px;
+        background-color: brown;
+    }
+        @media @decktop {
+                width: 700px;
+                height: 200px;
+                background-color: @darkgrey;
+        }
+}
+
+
+.link {
+    &-light {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+    }
+
+       &-bottom {
+        width: 400px;
+        height: 100px;
+        background-color: rgb(55, 0, 255);
+    }
+
+       &-default {
+        width: 300px;
+        height: 400px;
+        background-color: rgb(30, 255, 0);
+    }
+}
